@@ -1,0 +1,6 @@
+fastaisandbox\Demo.class
+fastaisandbox\ansi\FastAISandboxAnsi.class
+fastaisandbox\process\IsolatedProcessRunner.class
+fastaisandbox\security\ExecutionPolicy.class
+fastaisandbox\FastAISandbox.class
+fastaisandbox\fs\VirtualFileSystem.class

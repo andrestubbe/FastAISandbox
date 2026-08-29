@@ -1,0 +1,2 @@
+JMH S 46 fastaisandbox.benchmark.FastAISandboxBenchmark S 95 fastaisandbox.benchmark.jmh_generated.FastAISandboxBenchmark_benchmarkCommandValidation_jmhTest S 26 benchmarkCommandValidation S 10 Throughput E A 1 1 1 E I 1 2 T 3 1 s E I 1 3 T 3 1 s E I 1 1 E E E E E E U 12 MILLISECONDS E E 
+JMH S 46 fastaisandbox.benchmark.FastAISandboxBenchmark S 96 fastaisandbox.benchmark.jmh_generated.FastAISandboxBenchmark_benchmarkPathJailValidation_jmhTest S 27 benchmarkPathJailValidation S 10 Throughput E A 1 1 1 E I 1 2 T 3 1 s E I 1 3 T 3 1 s E I 1 1 E E E E E E U 12 MILLISECONDS E E 
