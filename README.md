@@ -1,3 +1,6 @@
+> [!WARNING]
+> **🚧 WIP — Active AI Pipeline Construction & Architecture Optimization in Progress.**
+
 # FastAISandbox 0.1.0 [ALPHA] — In-Process Security Governor & Isolation Jail for Java AI Agents
 
 [![Status](https://img.shields.io/badge/status-0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastAISandbox/releases/tag/0.1.0)
