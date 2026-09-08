@@ -15,6 +15,8 @@
 
 **FastAISandbox** is a lightweight execution cage built for autonomous agents (**[FastAIAgent](https://github.com/andrestubbe/FastAIAgent)**, **[FastAIMCP](https://github.com/andrestubbe/FastAIMCP)**) and code-generation environments. It prevents jailbreaks, destructive shell commands, directory traversal exploits, and runaway resource consumption without requiring heavy Docker containers or virtual machines.
 
+[Watch Demo (YouTube)] | [Watch JMH Benchmark (Youtube)]
+
 ---
 
 ## Quick Start
