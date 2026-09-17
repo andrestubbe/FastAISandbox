@@ -1,29 +1,24 @@
 @echo off
-chcp 65001 >nul
+setlocal
 cd /d "%~dp0"
-set "MAVEN_OPTS=--enable-native-access=ALL-UNNAMED --sun-misc-unsafe-memory-access=allow -Dorg.slf4j.simpleLogger.defaultLogLevel=warn"
-
 echo ===================================================
-echo  Building FastAISandbox & JMH Benchmarks Uber-Jar
+echo  Building FastAISandbox JMH Benchmarks Uber-Jar
 echo ===================================================
-
-call mvn -q clean install -DskipTests 2>nul
+echo [1/3] Building FastAISandbox...
+call "C:\Users\andre\tools\apache-maven-3.9.9\bin\mvn.cmd" install -DskipTests
 if %ERRORLEVEL% NEQ 0 (
-    echo [ERROR] FastAISandbox install failed!
-    pause
+    echo FastAISandbox install failed!
     exit /b %ERRORLEVEL%
 )
 
+echo [2/3] Building Benchmark Uber-JAR...
 cd examples\Benchmark
-call mvn -q clean package 2>nul
+call "C:\Users\andre\tools\apache-maven-3.9.9\bin\mvn.cmd" clean package
 if %ERRORLEVEL% NEQ 0 (
-    echo [ERROR] Benchmark packaging failed!
-    pause
+    echo Benchmark package failed!
     exit /b %ERRORLEVEL%
 )
 
-echo ===================================================
-echo  Running JMH Benchmarks (Throughput: ops/ms)
-echo ===================================================
-java --enable-native-access=ALL-UNNAMED -jar target\benchmarks.jar -f 1 -wi 2 -i 3 -tu ms -bm thrpt
+echo [3/3] Running JMH Benchmarks...
+java -jar target\benchmarks.jar -f 1 -wi 2 -i 3 -tu ms -bm thrpt
 pause

@@ -1,5 +1,6 @@
-package fastaisandbox;
+package fastaisandbox.demo;
 
+import fastaisandbox.FastAISandbox;
 import fastaisandbox.ansi.FastAISandboxAnsi;
 
 public final class Demo {

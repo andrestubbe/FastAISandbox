@@ -1,7 +1,6 @@
 package fastaisandbox.benchmark;
 
 import fastaisandbox.FastAISandbox;
-import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Measurement;
@@ -20,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 2, time = 1)
 @Measurement(iterations = 3, time = 1)
 @Fork(1)
-public class FastAISandboxBenchmark {
+public class Benchmark {
 
     private FastAISandbox sandbox;
     private String safeCommand;
@@ -33,12 +32,12 @@ public class FastAISandboxBenchmark {
         safePath = "data/input.parquet";
     }
 
-    @Benchmark
+    @org.openjdk.jmh.annotations.Benchmark
     public boolean benchmarkCommandValidation() {
         return sandbox.executeSafe(safeCommand);
     }
 
-    @Benchmark
+    @org.openjdk.jmh.annotations.Benchmark
     public boolean benchmarkPathJailValidation() {
         return sandbox.isPathPermitted(safePath);
     }
