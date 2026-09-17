@@ -48,6 +48,7 @@ public class Example {
 
 - [Why FastAISandbox?](#why-fastaisandbox)
 - [Key Features](#key-features)
+- [Real-World Use Cases](#real-world-use-cases)
 - [Architecture Overview](#architecture-overview)
 - [Performance Benchmarks](#performance-benchmarks)
 - [API Quick Reference](#api-quick-reference)
@@ -87,6 +88,15 @@ FastAISandbox eliminates container startup penalty with microsecond in-process g
 - ⏱️ **CPU & Execution Governance** — Enforces millisecond-level execution deadlines and process timeouts.
 - ⚡ **Extreme Throughput** — Validates over 11,600,000 commands per second directly within the JVM.
 - 📊 **FastANSI 120-Column HUD** — Rich console telemetry displaying security verdicts, permitted paths, and status trees.
+
+---
+
+## Real-World Use Cases
+
+- 🤖 **Autonomous Coding Agent Jail**: Protect host development environments by intercepting destructive commands (`rm -rf`, `mkfs`, `dd`, fork bombs) before agent code is passed to the OS shell.
+- 🔌 **Untrusted MCP Tool Execution**: Cage third-party Model Context Protocol (MCP) servers and tools inside virtual directory boundaries, preventing sensitive file exfiltration (`/etc/passwd`, `id_rsa`).
+- 📁 **Multi-Tenant Workspace Isolation**: Confine autonomous subagents strictly to designated project subdirectories (`workspace/agent_42/`) with zero risk of path traversal escapes (`../../`).
+- ⚡ **High-Throughput Policy Gateway**: Filter thousands of automated shell commands and system tool invocations per second with sub-microsecond latency and zero GC allocations.
 
 ---
 
